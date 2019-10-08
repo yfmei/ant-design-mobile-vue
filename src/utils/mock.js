@@ -13,7 +13,6 @@ export function generateListData(titles, times = 15) {
 
   for (let i = 0; i < times; i++) {
     let obj = generateObjData(titles)
-    obj.name = i
     data.push(obj)
   }
   return data
@@ -27,8 +26,8 @@ export function generateObjData(titles) {
   let obj = {}
   titles.map((item, index) => {
     // todo 根据类型生成模拟数据
-    obj[item.prop] = index
-    // obj[item.prop] = generateWordPair()
+    // obj[item.prop] = index
+    obj[item.prop] = generateWordPair()
   })
 
   return obj
