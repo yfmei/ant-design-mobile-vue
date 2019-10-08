@@ -1,0 +1,8 @@
+/**
+ * @author yfmei
+ * @date 2019/10/8
+ */
+
+@mixin border($color){
+    border: solid $color 1px ;
+}
