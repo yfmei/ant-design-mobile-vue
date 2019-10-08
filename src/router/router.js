@@ -10,10 +10,18 @@ Vue.use(Router)
 
 let routerMap = [
   {
-    path: "/",
+    path: "/scroll",
     component: () => import("@/components/DirectiveScroll"),
     meta: {
       title: "指令-无限下拉",
+      icon: ""
+    }
+  },
+  {
+    path: "/flex",
+    component: () => import("@/components/layout/Flex"),
+    meta: {
+      title: "flex布局",
       icon: ""
     }
   }
