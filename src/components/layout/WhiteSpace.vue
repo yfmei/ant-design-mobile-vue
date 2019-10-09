@@ -13,30 +13,30 @@
     },
     computed: {
       getClass() {
-        return "whitespace-" + this.size
+        return "am-whitespace-" + this.size
       }
     }
   }
 </script>
 
 <style type="text/css" scoped>
-  .whitespace-xs {
+  .am-whitespace-xs {
     height: 3px;
   }
 
-  .whitespace-sm {
+  .am-whitespace-sm {
     height: 6px;
   }
 
-  .whitespace-md {
+  .am-whitespace-md {
     height: 9px;
   }
 
-  .whitespace-lg {
+  .am-whitespace-lg {
     height: 15px;
   }
 
-  .whitespace-xl {
+  .am-whitespace-xl {
     height: 21px;
   }
 </style>
