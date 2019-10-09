@@ -18,9 +18,9 @@
         default: "row"
       },
       // 子容器宽度超过父容器时如何换行
-      // nowrap 不换行
-      // wrap 换行
-      // wrap-reverse 从下到上换行
+      // nowrap: 不换行
+      // wrap: 换行
+      // wrap-reverse： 从下到上换行
       wrap: {
         type: String,
         default: "nowrap"
@@ -31,19 +31,21 @@
         default: "row nowrap"
       },
       // 设置子容器沿主轴排列
-      // flex-start 左对齐
-      // flex-end 右对齐
-      // space-around 每个子容器之间的间隔相同, 因此项目之间的间距比子容器与父容器边框的间距大一倍
-      // space-between 首尾两个子容器紧贴父容器, 子容器间隔相同
+      // center: 居中
+      // flex-start: 左对齐
+      // flex-end: 右对齐
+      // space-around: 每个子容器之间的间隔相同, 因此项目之间的间距比子容器与父容器边框的间距大一倍
+      // space-between: 首尾两个子容器紧贴父容器, 子容器间隔相同
       justify: {
         type: String,
         default: "start"
       },
       // 设置子容器沿交叉轴排列
-      // flex-start 上对齐
-      // flex-end 下对齐
-      // baseline start-end 方向的首行文字为基线对齐
-      // stretch 拉伸占满整个容器
+      // center: 居中
+      // flex-start: 上对齐
+      // flex-end: 下对齐
+      // baseline: start -> end 方向的首行文字为基线对齐
+      // stretch: 拉伸占满整个容器
       align: {
         type: String,
         default: "start"
@@ -61,15 +63,20 @@
           // flexDirection: that.direction,
           // flexWrap: that.wrap,
           flexFlow: that.$flow,
-          justifyContent: that.getFlexProp(that.justify),
-          alignItems: that.getFlexProp(that.align)
+          justifyContent: that.getJustifyProp(that.justify),
+          alignItems: that.getAlignProp(that.align)
         },
         $flow: that.flow
       }
     },
     methods: {
-      getFlexProp(prop) {
-        return prop === "center" ? prop : "flex-" + prop
+      getJustifyProp(prop) {
+        if (prop === "center") return prop
+        return ["around", "between"].includes(prop) ? "space-" + prop : "flex-" + prop
+      },
+      getAlignProp(prop) {
+        // todo stretch not working
+        return ["center", "baseline", "stretch"].includes(prop) ? prop : "flex-" + prop
       }
     }
   }
