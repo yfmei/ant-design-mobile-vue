@@ -19,9 +19,25 @@ let routerMap = [
   },
   {
     path: "/flex",
-    component: () => import("@/components/layout/FlexDemo"),
+    component: () => import("@/components/demo/layout/FlexDemo"),
     meta: {
       title: "flex布局",
+      icon: ""
+    }
+  },
+  {
+    path: "/whitespace",
+    component: () => import("@/components/demo/layout/WhiteSpaceDemo"),
+    meta: {
+      title: "空白行",
+      icon: ""
+    }
+  },
+  {
+    path: "/wingblank",
+    component: () => import("@/components/demo/layout/WingBlankDemo"),
+    meta: {
+      title: "左右留白",
       icon: ""
     }
   }
