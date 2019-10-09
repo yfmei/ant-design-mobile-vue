@@ -37,7 +37,7 @@
       // space-between 首尾两个子容器紧贴父容器, 子容器间隔相同
       justify: {
         type: String,
-        default: "center"
+        default: "start"
       },
       // 设置子容器沿交叉轴排列
       // flex-start 上对齐
@@ -46,12 +46,11 @@
       // stretch 拉伸占满整个容器
       align: {
         type: String,
-        default: "center"
+        default: "start"
       }
     },
     data() {
       let that = this
-      let flex = "flex-"
       if (!that.$options.propsData.flow) {
         // flow 不存在就用 direction + wrap 组合
         that.$flow = that.direction + " " + that.wrap
@@ -62,10 +61,15 @@
           // flexDirection: that.direction,
           // flexWrap: that.wrap,
           flexFlow: that.$flow,
-          justifyContent: flex + that.justify,
-          alignItems: flex + that.align
+          justifyContent: that.getFlexProp(that.justify),
+          alignItems: that.getFlexProp(that.align)
         },
         $flow: that.flow
+      }
+    },
+    methods: {
+      getFlexProp(prop) {
+        return prop === "center" ? prop : "flex-" + prop
       }
     }
   }
