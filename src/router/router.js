@@ -19,7 +19,7 @@ let routerMap = [
   },
   {
     path: "/flex",
-    component: () => import("@/components/layout/Flex"),
+    component: () => import("@/components/layout/FlexDemo"),
     meta: {
       title: "flex布局",
       icon: ""
