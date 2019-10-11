@@ -40,6 +40,14 @@ let routerMap = [
       title: "左右留白",
       icon: ""
     }
+  },
+  {
+    path: "/border",
+    component: () => import("@/components/demo/border/BorderDemo"),
+    meta: {
+      title: "边框",
+      icon: ""
+    }
   }
 ]
 let routes = routerMap.concat(scroll)
