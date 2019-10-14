@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import Flex from "components/layout/Flex"
+  import Flex from "@/components/layout/Flex"
 
   export default {
     name: "Button",
@@ -58,7 +58,7 @@
 </script>
 
 <style scoped lang="scss">
-
+  /* 默认按钮和 ghost 按钮的 disabled 需要特殊处理*/
   .default{
     @include button($white, $black, $light-gray);
   }
@@ -67,28 +67,20 @@
     @include button($light-gray, $black, $light-gray);
   }
 
-  .primary{
-    @include button($blue);
-  }
-
-  .primary-disabled{
-    @include button($blue);
-  }
-
-  .warning-disabled{
-    @include button($red);
-  }
-
-  .warning{
-    @include button($red);
-  }
-
   .ghost{
     @include button($white, $blue, $blue);
   }
 
   .ghost-disabled{
     @include button($white, $black, $light-gray);
+  }
+
+  .primary .primary-disabled{
+    @include button($blue);
+  }
+
+  .warning .warning-disabled{
+    @include button($red);
   }
 
   .cursor {
