@@ -6,3 +6,11 @@
 @mixin border($color){
     border: solid $color 1px ;
 }
+
+@mixin button($background-color, $color: $white, $border-color: $color, $radius: 5px, $height: 47px) {
+    background-color: $background-color;
+    color: $color;
+    @include border($border-color);
+    border-radius: $radius;
+    height: $height;
+}
