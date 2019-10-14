@@ -48,6 +48,14 @@ let routerMap = [
       title: "边框",
       icon: ""
     }
+  },
+  {
+    path: "/button",
+    component: () => import("@/components/demo/button/ButtonDemo"),
+    meta: {
+      title: "按钮",
+      icon: ""
+    }
   }
 ]
 let routes = routerMap.concat(scroll)
