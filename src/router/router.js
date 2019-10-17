@@ -10,6 +10,14 @@ Vue.use(Router)
 
 let routerMap = [
   {
+    path: "/",
+    component: () => import("@/components/demo/index"),
+    meta: {
+      title: "首页",
+      icon: ""
+    }
+  },
+  {
     path: "/scroll",
     component: () => import("@/components/DirectiveScroll"),
     meta: {
