@@ -64,6 +64,14 @@ let routerMap = [
       title: "按钮",
       icon: ""
     }
+  },
+  {
+    path: "/touchFeedback",
+    component: () => import("@/components/demo/lib/TouchFeedbackDemo"),
+    meta: {
+      title: "触摸反馈",
+      icon: ""
+    }
   }
 ]
 let routes = routerMap.concat(scroll)
