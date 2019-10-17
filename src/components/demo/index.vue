@@ -114,6 +114,9 @@
           },
           {
             name: "Other", isFold: false, children: [{ name: "LocaleProvider", path: "/localeProvider" }]
+          },
+          {
+            name: "Lib", isFold: false, children: [{ name: "TouchFeedback", path: "/touchFeedback" }]
           }
         ]
       }
