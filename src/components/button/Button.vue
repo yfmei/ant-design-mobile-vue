@@ -74,7 +74,10 @@
     },
     methods: {
       clickEvent() {
-        this.$emit(this.onClick ? this.onClick : "click")
+        let that = this
+        if (!that.disabled) {
+          this.$emit(this.onClick ? this.onClick : "click")
+        }
       }
     }
   }
