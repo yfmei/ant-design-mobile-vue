@@ -1,34 +1,28 @@
 <template>
   <div>
-    <div class="block">Block</div>
+    <Block/>
     <WhiteSpace size="xs"/>
-    <div class="block">Block</div>
+    <Block/>
     <WhiteSpace size="sm"/>
-    <div class="block">Block</div>
+    <Block/>
     <WhiteSpace size="md"/>
-    <div class="block">Block</div>
+    <Block/>
     <WhiteSpace size="lg"/>
-    <div class="block">Block</div>
+    <Block/>
     <WhiteSpace size="xl"/>
-    <div class="block">Block</div>
+    <Block/>
   </div>
 </template>
 
 <script>
   import WhiteSpace from "@/components/layout/WhiteSpace"
+  import Block from "@/components/lib/Block"
   export default {
     name: "WhiteSpaceDemo",
-    components: { WhiteSpace }
+    components: { WhiteSpace, Block }
   }
 </script>
 
 <style scoped>
-  .block {
-    text-align: center;
-    background-color: #ebebef;
-    color: #bbb;
-    height: 30px;
-    line-height: 30px;
-    width: 100%;
-  }
+
 </style>

@@ -1,12 +1,18 @@
 <template>
   <div>
-    <WingBlank size="lg"><div class="block">Block</div></WingBlank>
+    <WingBlank size="lg">
+      <Block/>
+    </WingBlank>
 
     <WhiteSpace size="lg"/>
-    <WingBlank size="md"><div class="block">Block</div></WingBlank>
+    <WingBlank size="md">
+      <Block/>
+    </WingBlank>
 
     <WhiteSpace size="lg"/>
-    <WingBlank size="sm"><div class="block">Block</div></WingBlank>
+    <WingBlank size="sm">
+      <Block/>
+    </WingBlank>
   </div>
 </template>
 

@@ -4,121 +4,110 @@
     <div class="sub-title">Basic</div>
 
     <Flex justify="end" align="end">
-      <div class="block item">Block</div>
-      <div class="block item">Block</div>
+      <Block class="item"/>
+      <Block class="item"/>
     </Flex>
     <WhiteSpace size="lg"/>
     <Flex>
-      <div class="block item">Block</div>
-      <div class="block item">Block</div>
-      <div class="block item">Block</div>
+      <Block class="item"/>
+      <Block class="item"/>
+      <Block class="item"/>
     </Flex>
     <WhiteSpace size="lg"/>
     <Flex>
-      <div class="block item">Block</div>
-      <div class="block item">Block</div>
-      <div class="block item">Block</div>
-      <div class="block item">Block</div>
+      <Block class="item"/>
+      <Block class="item"/>
+      <Block class="item"/>
+      <Block class="item"/>
 
     </Flex>
     <WhiteSpace size="lg"/>
 
     <div class="sub-title">Wrap</div>
     <Flex wrap="wrap">
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
     </Flex>
     <WhiteSpace size="lg"/>
 
     <div class="sub-title">Justify</div>
     <Flex justify="start">
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
     </Flex>
     <WhiteSpace/>
     <Flex justify="center">
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
     </Flex>
     <WhiteSpace/>
     <Flex justify="end">
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
     </Flex>
 
     <WhiteSpace/>
     <Flex justify="between">
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
     </Flex>
     <WhiteSpace/>
 
     <Flex justify="around">
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline"/>
+      <Block class="inline"/>
     </Flex>
     <WhiteSpace size="lg"/>
     <div class="sub-title">Align</div>
 
     <Flex align="start">
-      <div class="block inline">Block</div>
-      <div class="block inline small">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline small"/>
+      <Block class="inline"/>
     </Flex>
     <WhiteSpace/>
     <Flex align="end">
-      <div class="block inline">Block</div>
-      <div class="block inline small">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline small"/>
+      <Block class="inline"/>
     </Flex>
     <WhiteSpace/>
     <Flex align="baseline">
-      <div class="block inline">Block</div>
-      <div class="block inline small">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline small"/>
+      <Block class="inline"/>
     </Flex>
     <WhiteSpace/>
     <Flex align="stretch">
-      <div class="block inline">Block</div>
-      <div class="block inline small">Block</div>
-      <div class="block inline">Block</div>
+      <Block class="inline"/>
+      <Block class="inline small"/>
+      <Block class="inline"/>
     </Flex>
   </div>
 </template>
 
 <script>
   import Flex from "@/components/layout/Flex"
-  import WhiteSpace from "components/layout/WhiteSpace"
+  import WhiteSpace from "@/components/layout/WhiteSpace"
+  import Block from "@/components/lib/Block"
 
   export default {
     name: "FlexDemo",
-    components: { WhiteSpace, Flex }
+    components: { WhiteSpace, Flex, Block }
   }
 </script>
 
 <style type="text/css" scoped>
-  .block:first-child {
-     margin-left: 0;
-  }
-
-  .block {
-    text-align: center;
-    background-color: #ebebef;
-    color: #bbb;
-    height: 30px;
-    line-height: 30px;
-    width: 100%;
-  }
 
   .small {
     height: 20px!important;
