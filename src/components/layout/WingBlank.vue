@@ -21,20 +21,24 @@
   }
 </script>
 
-<style type="text/css" scoped>
-  .am-wingblank-sm {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
+<style lang="scss">
+  $wingblankPrefixClz: am-wingblank;
 
-  .am-wingblank-md {
-    margin-left: 8px;
-    margin-right: 8px
-  }
+  .#{$wingblankPrefixClz}{
+    &-sm {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
 
-  .am-wingblank-lg {
-    margin-left: 15px;
-    margin-right: 15px
+    &-md {
+      margin-left: 8px;
+      margin-right: 8px
+    }
+
+    &-lg {
+      margin-left: 15px;
+      margin-right: 15px
+    }
   }
 
 </style>

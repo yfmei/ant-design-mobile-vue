@@ -19,24 +19,28 @@
   }
 </script>
 
-<style type="text/css" scoped>
-  .am-whitespace-xs {
-    height: 3px;
+<style lang="scss">
+  $whitePrefixClz: am-whitespace;
+  .#{$whitePrefixClz}{
+    &-xs {
+      height: 3px;
+    }
+
+    &-sm {
+      height: 6px;
+    }
+
+    &-md {
+      height: 9px;
+    }
+
+    &-lg {
+      height: 15px;
+    }
+
+    &-xl {
+      height: 21px;
+    }
   }
 
-  .am-whitespace-sm {
-    height: 6px;
-  }
-
-  .am-whitespace-md {
-    height: 9px;
-  }
-
-  .am-whitespace-lg {
-    height: 15px;
-  }
-
-  .am-whitespace-xl {
-    height: 21px;
-  }
 </style>
