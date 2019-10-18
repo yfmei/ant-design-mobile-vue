@@ -6,7 +6,7 @@
         <div class="am-demo-category-arrow"></div>
       </div>
       <div class="am-list-body">
-        <div class="am-list-item" v-for="c in m.children" @click="jump(c.path)">
+        <div class="am-list-item" v-for="c in m.children" @click="jump('/' + m.name.split(' ').join('') + c.path)">
           <div class="am-list-line">
             <div class="am-list-content">{{c.name}}</div>
           </div>

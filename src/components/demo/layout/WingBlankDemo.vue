@@ -19,9 +19,10 @@
 <script>
   import WingBlank from "@/components/layout/WingBlank"
   import WhiteSpace from "@/components/layout/WhiteSpace"
+  import Block from "@/components/lib/Block"
   export default {
     name: "WingBlankDemo",
-    components: { WingBlank, WhiteSpace }
+    components: { WingBlank, WhiteSpace, Block }
   }
 </script>
 
