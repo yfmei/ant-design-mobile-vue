@@ -14,9 +14,11 @@
       <WhiteSpace/>
       <Button type="warning" disabled>warning disabled</Button>
       <WhiteSpace/>
-      <Button type="ghost">ghost</Button>
-      <WhiteSpace/>
-      <Button type="ghost" disabled>ghost disabled</Button>
+      <WingBlank>
+        <Button type="ghost" inline>ghost</Button>
+        <Button type="ghost" disabled inline>ghost disabled</Button>
+        <Button type="ghost" size="small" inline>ghost</Button>
+      </WingBlank>
     </WingBlank>
   </div>
 </template>
