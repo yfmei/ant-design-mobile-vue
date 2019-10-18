@@ -58,26 +58,23 @@
     },
     mounted() {
       let that = this
-      console.log(that.disabled)
 
       that.originEl = that.$el
       // 保存 slot 的 classNames
       that.originClassNames = that.originEl.className
 
       that.originEl.ontouchstart = (ev) => {
-        console.log("touch start %o", ev)
+        console.debug("touch start %o", ev)
         that.onTouchChange()
         if (that.disabled) {
           return
         }
         that.changeClassName()
         that.changeStyle()
-        console.log()
       }
 
       that.originEl.ontouchend = (ev) => {
-        console.log("touch end %o", ev)
-
+        console.debug("touch end %o", ev)
         that.onTouchChange()
         if (that.disabled) {
           return
@@ -87,11 +84,11 @@
       }
 
       that.originEl.onclick = (ev) => {
-        console.log("touch click %o", ev)
+        console.debug("touch click %o", ev)
       }
 
       that.originEl.oncontextmenu = (ev) => {
-        console.log("oncontextmenu %o", ev)
+        console.debug("oncontextmenu %o", ev)
         // 禁止长按弹出菜单
         ev.preventDefault()
       }
