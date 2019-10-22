@@ -79,6 +79,17 @@ let routerMap = [
       }
     }
   ),
+  getFullPath("feedback",
+    {
+      path: "progress",
+      name: "progress",
+      component: () => import("@/components/demo/feedback/ProgressDemo"),
+      meta: {
+        title: "进度条",
+        icon: ""
+      }
+    }
+  ),
   {
     path: "touchFeedback",
     name: "touchFeedback",
