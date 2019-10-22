@@ -99,8 +99,7 @@
       }
 
       document.onreadystatechange = () => {
-        console.log("mounted:" + document.readyState)
-        // clearInterval(that.timer)
+        console.debug("mounted:" + document.readyState)
       }
     }
   }
