@@ -66,30 +66,35 @@
     },
     mounted() {
       let that = this
-      // 未指定 percent, total 默认为 100
-      if (!that.$options.propsData["percent"]) {
-        that.total = 100
-      }
-      let step = that.total / 10
 
-      console.debug(that.percent)
-      console.debug(that.width)
-      console.debug(that.total)
+      console.debug("appearTransition: " + that.appearTransition)
 
-      // 是否需要过渡
       if (that.appearTransition) {
+        console.debug("需要过渡效果")
+        let finished = 100
+        if (!that.$options.propsData["percent"]) {
+          console.debug("未指定 percent, 但需要过渡效果时 total 默认为 100")
+          that.total = finished
+        }
+        // 间隔
+        let interval = 30
+        // 步长
+        let step = that.total / 10
+        console.debug("开始过渡，步长: %o, 间隔: %o", step, interval)
         that.timer = setInterval(() => {
-          if (that.width === 100) {
+          if (that.width === that.total) {
+            console.debug("过渡结束, 停止定时器")
             clearInterval(that.timer)
-            that.isComplete = true
-            return
-          } else if (that.width === that.total) {
-            clearInterval(that.timer)
-            return
+            if (that.total === finished) {
+              console.debug("过渡结束, 停止定时器并隐藏进度条")
+              that.isComplete = true
+            }
+          } else {
+            that.width += step
           }
-          that.width += step
-        }, 30)
+        }, interval)
       } else {
+        console.debug("不需要过渡效果")
         that.width = that.total
       }
 
