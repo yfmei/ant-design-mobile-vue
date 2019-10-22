@@ -6,6 +6,7 @@
     <div class="demo-preview-item">
       <div class="demoTitle"></div>
       <div class="demoContainer">
+        <Progress appear-transition></Progress>
         <router-view :key="key"></router-view>
       </div>
     </div>
@@ -13,8 +14,10 @@
 </template>
 
 <script>
+  import Progress from "@/components/feedback/progress/Progress"
   export default {
     name: "Demo",
+    components: { Progress },
     computed: {
       key() {
         return this.$route.fullPath
